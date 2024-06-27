@@ -17,3 +17,4 @@ jobs:
         run: echo "Hello ${{ github.event.inputs.who-to-greet }}"
       - run: |
           echo "Hello ${{ github.event.inputs.who-to-greet }}"
+      - uses: RickardHF/ContainerAction@main
