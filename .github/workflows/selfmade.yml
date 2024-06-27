@@ -1,0 +1,19 @@
+name: Self-made workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      who-to-greet:
+        description: This is where you specify who to greet
+        required: true
+        default: World
+
+jobs:
+  greet:
+    name: Greeter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step with name
+        run: echo "Hello ${{ github.event.inputs.who-to-greet }}"
+      - run: |
+          echo "Hello ${{ github.event.inputs.who-to-greet }}"
