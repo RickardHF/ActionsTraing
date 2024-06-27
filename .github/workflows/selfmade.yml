@@ -17,4 +17,7 @@ jobs:
         run: echo "Hello ${{ github.event.inputs.who-to-greet }}"
       - run: |
           echo "Hello ${{ github.event.inputs.who-to-greet }}"
-      - uses: RickardHF/ContainerAction@main
+      - uses: RickardHF/ContainerAction@v1.0
+        id: self-made-action
+        name: I''ve made this
+      - run: echo ${{ steps.self-made-action.outputs.greeting }}
